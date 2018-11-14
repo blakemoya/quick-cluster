@@ -1,12 +1,12 @@
 # Quick-cluster
-Quick-cluster is a small script to cluster and display data from a contiguous table in a .xlsx file with agglomerative clustering and then embed that data into a three dimensional interactive plot using hypertools and openpyxl. This clustering and visualization serves as a compact method for visualizing high dimensional data, and can intuitively reveal relationships in the data that might be otherwise hidden. 
-##Getting Started
+Quick-cluster is a small script to cluster and display data from a contiguous table in a .xlsx file with agglomerative clustering and then embed that data into a three dimensional interactive plot using hypertools and openpyxl. This clustering and visualization serves as a compact method for visualizing high dimensional data, and can intuitively reveal relationships in the data that might be otherwise hidden.
+## Getting Started
 These instructions will show you how to get quick-cluster to run on your own data.
-###Prerequisites
+### Prerequisites
 - openpyxl 2.5.10
 - numpy >= 1.14.3
 - hypertools 0.5.1
-###Installation
+### Installation
 Clone this repo
 ```
 git clone https://github.com/blakemoya/quick-cluster
@@ -20,7 +20,7 @@ A graph similar to this should appear:
 ![t-SNE graph titled "Figure 1"](https://imgur.com/a/obxxqyO)
 and a copy of the input spreadsheet will appear in the "output" folder. This new spreadsheet will contain a new worksheet listing the names of the datapoints that were plotted next to their agglomerated cluster number listed in the legend of the graph, like so:
 ![Excel worksheet produced by sample.xlsx](https://imgur.com/a/Xrir2cx)
-###Usage
+### Usage
 1. Copy your xlsx file into the "input" folder int the quick-cluster directory
 2. Run
 ```
