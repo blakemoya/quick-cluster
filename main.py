@@ -46,23 +46,31 @@ def main(_):
 
     # the actual clustering and TSNE operation
     arr_reduced = hyp.reduce(arr, reduce='TSNE')
-    labels = hyp.cluster(arr, n_clusters=ec, cluster='AgglomerativeClustering')
+    agg_labels = hyp.cluster(arr, n_clusters=ec, cluster='AgglomerativeClustering')
 
     # read agglomerated clusters into a numpy array
     labeled_arr = []
     for i in range(sr, r + sr):
-        labeled_arr.append([labels[i - sr], ws.cell(row=i, column=lc).value])
+        labeled_arr.append([agg_labels[i - sr], ws.cell(row=i, column=lc).value])
     labeled_arr = np.array(labeled_arr)
-    labeled_arr.sort(axis=0)
+    sorted_labeled_arr = labeled_arr
+    sorted_labeled_arr.sort(axis=0)
 
     # write real labels into agglomerated groups onto a new worksheet on a copy of the input workbook
     ws2 = wb.create_sheet('Agglomerative Labels')
-    for i in range(1, r + 1):
-        ws2.cell(row=i, column=1).value = labeled_arr[i-1, 0]
-        ws2.cell(row=i, column=2).value = labeled_arr[i-1, 1]
+    n = 0
+    j = 1
+    for i in range(0, r):
+        if sorted_labeled_arr[i, 0] == str(n):
+            ws2.cell(row=j, column=(n + 1)).value = sorted_labeled_arr[i, 1]
+            j = j + 1
+        else:
+            n = n + 1
+            j = 1
     wb.save(od + '/output.xlsx')
 
-    hyp.plot(arr_reduced, '.', normalize='within', reduce='TSNE', hue=labels, legend=True)
+    hyp.plot(arr_reduced, '.', normalize='within', reduce='TSNE', hue=agg_labels, legend=True, labels=labeled_arr[:, 1],
+             explore=True)
 
 
 if __name__ == '__main__':
