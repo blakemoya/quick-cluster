@@ -108,7 +108,7 @@ class UIDialog(object):
         self.startRowLineEdit.setText(_translate("Dialog", "2"))
         self.startRowLineEdit.setPlaceholderText(_translate("Dialog", "e.g. \'1\', \'5\'"))
         self.endRowLabel.setText(_translate("Dialog", "End Row:"))
-        self.endRowLineEdit.setText(_translate("Dialog", "102"))
+        self.endRowLineEdit.setText(_translate("Dialog", "1002"))
         self.endRowLineEdit.setPlaceholderText(_translate("Dialog", "e.g. \'1\', \'5\'"))
         self.selectFileButton.setText(_translate("Dialog", "Select File"))
         self.clustersLabel.setText(_translate("Dialog", "Clusters:"))
