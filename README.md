@@ -18,19 +18,26 @@ Test with
 python main.py
 ```
 A graph similar to this should appear:
+<p align="center">
+  <img src="http://i.imgur.com/nuYKkyd.jpg" width="481" height="409" title="t-SNE graph titled Figure 1">
+</p>
 
-![alt text](http://i.imgur.com/nuYKkyd.jpg "t-SNE graph titled Figure 1")
+and a copy of the input spreadsheet will appear in the "output" folder.
 
-and a copy of the input spreadsheet will appear in the "output" folder. This new spreadsheet will contain a new worksheet listing the names of the datapoints that were plotted undeir their assigned agglomerative label (where '0' in the legend of the graph corresponds to 'A' in the spreadhseet), like so:
+This new spreadsheet will contain a new worksheet listing the names of the datapoints that were plotted undeir their assigned agglomerative label (where '0' in the legend of the graph corresponds to 'A' in the spreadhseet), like so:
 
-![alt text](http://i.imgur.com/jHyUtUU.jpg "Excel worksheet produced by sample.xlsx")
+<p align="center">
+  <img src="http://i.imgur.com/jHyUtUU.jpg" width="481" height="242" title="Excel worksheet produced by sample.xlsx">
+</p>
 
 ### Usage
 1. Navigate to your quick-cluster directory in command prompt 
 
 2. Run `python dialog.py` and a dialog like this will appear
 
-![alt text](https://i.imgur.com/ctQOMcn.png "Quick-cluster dialog")
+<p align="center">
+  <img src="http://i.imgur.com/ctQOMcn.png" height="212" width="268" title="Quick-cluster dialog">
+</p>
 
 3. Click "Select File" and navigate to your spreadsheet. Then select you label column, the column and row range you would like to cluster and reduce, and thenumber of clusters you'd like to separate your data into. Then click OK.
 
