@@ -24,7 +24,7 @@ A graph similar to this should appear:
 
 and a copy of the input spreadsheet will appear in the "output" folder.
 
-This new spreadsheet will contain a new worksheet listing the names of the datapoints that were plotted undeir their assigned agglomerative label (where '0' in the legend of the graph corresponds to 'A' in the spreadhseet), like so:
+This new spreadsheet will contain a new worksheet listing the names of the datapoints that were plotted under their assigned agglomerative label (where '0' in the legend of the graph corresponds to 'A' in the spreadhseet), like so:
 
 <p align="center">
   <img src="http://i.imgur.com/jHyUtUU.jpg" width="481" height="242" title="Excel worksheet produced by sample.xlsx">
